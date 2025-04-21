@@ -13,8 +13,8 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="flex justify-center gap-6">
-                    <img src="/src/assets/banner-img-1.png" alt="Doctor" className="w-[400px] rounded-2xl shadow-lg" />
-                    <img src="/src/assets/banner-img-1.png" alt="Doctor" className="w-[400px] rounded-2xl shadow-lg" />
+                    <img src="/src/assets/banner-img-1.png" alt="Doctor" className="w-[400px] rounded-2xl shadow-lg object-cover" />
+                    <img src="/src/assets/banner-img-1.png" alt="Doctor" className="w-[400px] rounded-2xl shadow-lg object-cover" />
                 </div>
             </div>
         </div>

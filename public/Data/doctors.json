@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Dr. Sarah Anderson",
+        "specialization": "Cardiology",
+        "qualification": "MBBS, MD - Cardiology, DNB",
+        "experience": "8+ Years Experience",
+        "registration": "Reg No: BD 12451001",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 2,
+        "name": "Dr. Michael Chen",
+        "specialization": "Neurology",
+        "qualification": "MBBS, MD - Neurology, DNB",
+        "experience": "10+ Years Experience",
+        "registration": "Reg No: BD 12451002",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 3,
+        "name": "Dr. Emily Rodriguez",
+        "specialization": "Pediatrics",
+        "qualification": "MBBS, MD - Pediatrics, DNB",
+        "experience": "7+ Years Experience",
+        "registration": "Reg No: BD 12451003",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 4,
+        "name": "Dr. James Wilson",
+        "specialization": "Orthopedics",
+        "qualification": "MBBS, MD - Orthopedics, DNB",
+        "experience": "12+ Years Experience",
+        "registration": "Reg No: BD 12451004",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 5,
+        "name": "Dr. Sophia Patel",
+        "specialization": "Dermatology",
+        "qualification": "MBBS, MD - Dermatology, DNB",
+        "experience": "6+ Years Experience",
+        "registration": "Reg No: BD 12451005",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 6,
+        "name": "Dr. David Thompson",
+        "specialization": "General Surgery",
+        "qualification": "MBBS, MD - General Surgery, DNB",
+        "experience": "9+ Years Experience",
+        "registration": "Reg No: BD 12451006",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 7,
+        "name": "Dr. Rachel Kumar",
+        "specialization": "Gynecology",
+        "qualification": "MBBS, MD - Gynecology, DNB",
+        "experience": "11+ Years Experience",
+        "registration": "Reg No: BD 12451007",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 8,
+        "name": "Dr. Benjamin Foster",
+        "specialization": "Psychiatry",
+        "qualification": "MBBS, MD - Psychiatry, DNB",
+        "experience": "9+ Years Experience",
+        "registration": "Reg No: BD 12451008",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    },
+    {
+        "id": 9,
+        "name": "Dr. Lisa Martinez",
+        "specialization": "Endocrinology",
+        "qualification": "MBBS, MD - Endocrinology, DNB",
+        "experience": "8+ Years Experience",
+        "registration": "Reg No: BD 12451009",
+        "availability": "Available",
+        "image": "/src/assets/doctor.png"
+    }
+]
