@@ -4,6 +4,7 @@ import MyBookings from '../Pages/MyBookings';
 import Blogs from '../Pages/Blogs';
 import Contact from '../Pages/Contact';
 import DoctorDetails from '../Pages/DoctorDetails';
+import Error from '../Pages/Error';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
         path: '/contact',
         element: <Contact />
+    },
+    {
+        path: '*',
+        element: <Error />
     }
 ]);
 

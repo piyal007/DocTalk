@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="flex flex-col items-center gap-6">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
-                        <img src="/src/assets/logo.png" alt="Phudu Logo" className="w-8 h-8" />
+                        <img src="https://i.postimg.cc/1XmpxyVH/logo.png" alt="Phudu Logo" className="w-8 h-8" />
                         <span className="text-2xl font-bold">Phudu</span>
                     </div>
 
@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                     <div className='border border-gray-200 w-full'></div>
                     {/* Social Media Icons */}
-                    <div className="flex gap-6 text-gray-600">
+                    <div className="flex gap-6 text-gray-600 items-center">
                         <a href="#" className="hover:text-blue-600"><FaFacebookF size={24}/></a>
                         <a href="#" className="hover:text-blue-600"><FaTwitter size={24} /></a>
                         <a href="#" className="hover:text-blue-600"><FaLinkedinIn size={24} /></a>

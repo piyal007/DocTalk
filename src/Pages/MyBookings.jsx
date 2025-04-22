@@ -103,7 +103,7 @@ const MyBookings = () => {
                     <p className="text-gray-600 text-center mb-12">Our platform connects you with well-verified, experienced doctors across various specialties — all at your convenience.</p>
                 </div>
                 {appointments.length > 0 ? (
-                    <div className="w-11/12 mx-auto space-y-6">
+                    <div className="space-y-6">
                         {appointments.map((appointment) => (
                             <div key={appointment.id} className="bg-white p-6 rounded-lg shadow-md">
                                 <div className="flex justify-between items-start mb-4">

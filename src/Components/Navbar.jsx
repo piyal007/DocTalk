@@ -17,8 +17,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <a className="flex items-center gap-2 text-xl font-bold cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-plus-circle"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg>
-                        Phudu
+                    <img src="https://i.postimg.cc/1XmpxyVH/logo.png" alt="Phudu Logo" className="w-8 h-8" /><span>Phudu</span>
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
