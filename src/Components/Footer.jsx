@@ -1,11 +1,12 @@
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { NavLink } from 'react-router';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 
 const Footer = () => {
     return (
         <footer className="bg-white py-10">
-            <div className="container mx-auto px-4">
+            <div className="w-11/12 mx-auto">
                 <div className="flex flex-col items-center gap-6">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
@@ -15,18 +16,18 @@ const Footer = () => {
 
                     {/* Navigation Links */}
                     <div className="flex gap-8 text-gray-600">
-                        <a href="/" className="hover:text-blue-600">Home</a>
-                        <a href="/my-bookings" className="hover:text-blue-600">My-Bookings</a>
-                        <a href="/blogs" className="hover:text-blue-600">Blogs</a>
-                        <a href="/contact" className="hover:text-blue-600">Contact Us</a>
+                        <NavLink to="/" className={({ isActive }) => `hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`}>Home</NavLink>
+                        <NavLink to="/my-bookings" className={({ isActive }) => `hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`}>My-Bookings</NavLink>
+                        <NavLink to="/blogs" className={({ isActive }) => `hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`}>Blogs</NavLink>
+                        <NavLink to="/contact" className={({ isActive }) => `hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`}>Contact Us</NavLink>
                     </div>
-
+                    <div className='border border-gray-200 w-full'></div>
                     {/* Social Media Icons */}
                     <div className="flex gap-6 text-gray-600">
-                        <a href="#" className="hover:text-blue-600"><Facebook size={24}/></a>
-                        <a href="#" className="hover:text-blue-600"><Twitter size={24} /></a>
-                        <a href="#" className="hover:text-blue-600"><Linkedin size={24} /></a>
-                        <a href="#" className="hover:text-blue-600"><Youtube size={24} /></a>
+                        <a href="#" className="hover:text-blue-600"><FaFacebookF size={24}/></a>
+                        <a href="#" className="hover:text-blue-600"><FaTwitter size={24} /></a>
+                        <a href="#" className="hover:text-blue-600"><FaLinkedinIn size={24} /></a>
+                        <a href="#" className="hover:text-blue-600"><FaYoutube size={24} /></a>
                     </div>
                 </div>
             </div>

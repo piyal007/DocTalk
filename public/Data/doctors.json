@@ -7,7 +7,10 @@
         "experience": "8+ Years Experience",
         "registration": "Reg No: BD 12451001",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/jjQNC6Zd/YOhcf41xol-NNa-YTkhhho-OKWNe3-Wko-VXugkme2-JZP.jpg",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Sunday", "Monday", "Tuesday"],
+        "consultationFee": 275
     },
     {
         "id": 2,
@@ -17,7 +20,10 @@
         "experience": "10+ Years Experience",
         "registration": "Reg No: BD 12451002",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/P56nH0kt/Kh4-Qs3-Af-Huevqv-Bq0o-ASMNW2-Co-FTk-QU6-Ylx-Zzr-Uw.jpg",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Monday", "Tuesday", "Wednesday"],
+        "consultationFee": 300
     },
     {
         "id": 3,
@@ -27,7 +33,10 @@
         "experience": "7+ Years Experience",
         "registration": "Reg No: BD 12451003",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/GpHtnkV5/Dw-HDn4s-Z5-ITk9-B9t-Xz-Xq-Vr9-Ksu1s-AWch8l8bru-Ej.jpg",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Tuesday", "Wednesday", "Thursday"],
+        "consultationFee": 250
     },
     {
         "id": 4,
@@ -37,7 +46,10 @@
         "experience": "12+ Years Experience",
         "registration": "Reg No: BD 12451004",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/K8745GL0/b-CB6xa9y-VOM422w-Ewvu4-Yat-Vcayv-Owa-Gb1gxl1-IT.png",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Wednesday", "Thursday", "Sunday"],
+        "consultationFee": 325
     },
     {
         "id": 5,
@@ -47,7 +59,10 @@
         "experience": "6+ Years Experience",
         "registration": "Reg No: BD 12451005",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/5yjFPh16/Jhz-Fq-Vya-Mg-MDh-QUj-WZW39-XVr-Ree5vx2bxj-VJ5t-M2.jpg",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Thursday", "Sunday", "Monday"],
+        "consultationFee": 275
     },
     {
         "id": 6,
@@ -57,7 +72,10 @@
         "experience": "9+ Years Experience",
         "registration": "Reg No: BD 12451006",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/tCXcgDk7/P9-Ge-Lwc3g6c8txu-C7g-EW6-Urnc-Mps-Cq8-WTB2zx-Xn-L.png",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Sunday", "Monday", "Wednesday"],
+        "consultationFee": 350
     },
     {
         "id": 7,
@@ -67,7 +85,10 @@
         "experience": "11+ Years Experience",
         "registration": "Reg No: BD 12451007",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/0NmnnJnL/8-WLTHV8b1x1-XMfn9n-Bye-Nd-Ue-DPq-Vgu-Ir-Jay-OZ7jz.png",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Monday", "Tuesday", "Thursday"],
+        "consultationFee": 300
     },
     {
         "id": 8,
@@ -77,7 +98,10 @@
         "experience": "9+ Years Experience",
         "registration": "Reg No: BD 12451008",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/SNsG5PVL/v4-MKu-QWdyn-Z9um-IVgvej-F2-L6voevt-FErs-Dp-Fjo-PZ.jpg",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Tuesday", "Wednesday", "Sunday"],
+        "consultationFee": 325
     },
     {
         "id": 9,
@@ -87,6 +111,9 @@
         "experience": "8+ Years Experience",
         "registration": "Reg No: BD 12451009",
         "availability": "Available",
-        "image": "/src/assets/doctor.png"
+        "image": "https://i.postimg.cc/cJsC9pB0/7uto6-Zmh-YKi-M05w-S6-Uwk-Todv-Kxk0ek-Vs-Vp-JU9-S67.jpg",
+        "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
+        "workingDays": ["Wednesday", "Thursday", "Monday"],
+        "consultationFee": 275
     }
 ]

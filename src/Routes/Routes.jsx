@@ -1,19 +1,31 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../Components/Footer';
-import Banner from '../Components/Banner';
-import MainSection from '../Components/Layout/Main/MainSection';
+import { createBrowserRouter } from 'react-router';
+import Home from '../Pages/Home';
+import MyBookings from '../Pages/MyBookings';
+import Blogs from '../Pages/Blogs';
+import Contact from '../Pages/Contact';
+import DoctorDetails from '../Pages/DoctorDetails';
 
-const Routes = () => {
-    return (
-        <>
-            <Navbar></Navbar>
-            <Banner></Banner>
-            <MainSection></MainSection>
-            <Footer></Footer>
-            
-        </>
-    );
-};
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Home />
+    },
+    {
+        path: '/doctor/:id',
+        element: <DoctorDetails />
+    },
+    {
+        path: '/my-bookings',
+        element: <MyBookings />
+    },
+    {
+        path: '/blogs',
+        element: <Blogs />
+    },
+    {
+        path: '/contact',
+        element: <Contact />
+    }
+]);
 
-export default Routes;
+export default router;

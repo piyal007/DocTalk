@@ -1,14 +1,16 @@
 import React from 'react';
 import { RiRegisteredLine } from "react-icons/ri";
+import { useNavigate } from 'react-router';
 
 const DoctorCard = ({ doctor }) => {
-    const { name, specialization, qualification, experience, registration, availability, image } = doctor;
+    const { id, name, specialization, qualification, experience, registration, availability, image } = doctor;
+    const navigate = useNavigate();
 
     return (
         <div className="bg-white rounded-3xl shadow-lg p-8 relative overflow-hidden">
             {/* Doctor Image */}
-            <div className="flex justify-center mb-6">
-                <img src={image} alt={name} className="rounded-2xl object-cover w-full" />
+            <div className="flex justify-center mb-6 h-[280px] w-full overflow-hidden rounded-2xl">
+                <img src={image} alt={name} className="h-full w-full object-cover object-top" />
             </div>
 
             {/* Badges */}
@@ -28,7 +30,10 @@ const DoctorCard = ({ doctor }) => {
                 <p className="text-blue-600 mb-4">{specialization}</p>
                 <div className="border border-dashed border-gray-300 mb-2"></div>
                 <p className="text-gray-500 text-sm mb-6 flex items-center gap-2"><RiRegisteredLine className="text-lg" />{registration}</p>
-                <button className="btn btn-outline btn-success hover:text-white w-full py-3 rounded-full text-base font-medium transition-colors">
+                <button 
+                    onClick={() => navigate(`/doctor/${id}`)}
+                    className="btn btn-outline btn-success hover:text-white w-full py-3 rounded-full text-base font-medium transition-colors"
+                >
                     View Details
                 </button>
             </div>
