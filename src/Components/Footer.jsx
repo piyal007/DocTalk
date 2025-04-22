@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -24,10 +24,10 @@ const Footer = () => {
                     <div className='border border-gray-200 w-full'></div>
                     {/* Social Media Icons */}
                     <div className="flex gap-6 text-gray-600 items-center">
-                        <a href="#" className="hover:text-blue-600"><FaFacebookF size={24}/></a>
-                        <a href="#" className="hover:text-blue-600"><FaTwitter size={24} /></a>
-                        <a href="#" className="hover:text-blue-600"><FaLinkedinIn size={24} /></a>
-                        <a href="#" className="hover:text-blue-600"><FaYoutube size={24} /></a>
+                        <a href="https://web.facebook.com/piyal.islam.666" target='_blank' className="hover:text-blue-600"><FaFacebook size={24}/></a>
+                        <a href="https://github.com/piyal007" target='_blank' className="hover:text-blue-600"><FaGithub size={24} /></a>
+                        <a href="https://www.linkedin.com/in/piyal-shah-495712132/" target='_blank' className="hover:text-blue-600"><FaLinkedin size={24} /></a>
+                        <a href="https://www.instagram.com/" target='_blank' className="hover:text-blue-600"><FaInstagram size={24} /></a>
                     </div>
                 </div>
             </div>
