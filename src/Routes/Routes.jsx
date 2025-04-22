@@ -5,31 +5,35 @@ import Blogs from '../Pages/Blogs';
 import Contact from '../Pages/Contact';
 import DoctorDetails from '../Pages/DoctorDetails';
 import Error from '../Pages/Error';
+import MainLayout from '../Components/Layout/MainLayout';
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Home />
-    },
-    {
-        path: '/doctor/:id',
-        element: <DoctorDetails />
-    },
-    {
-        path: '/my-bookings',
-        element: <MyBookings />
-    },
-    {
-        path: '/blogs',
-        element: <Blogs />
-    },
-    {
-        path: '/contact',
-        element: <Contact />
+        Component: MainLayout,
+        errorElement: <p>error</p>,
+        children: [
+            {
+                path: '/',
+                Component: Home
+            },
+            {
+                path: '/doctor/:id',
+                Component: DoctorDetails
+            },
+            {
+                path: '/my-bookings',
+                Component: MyBookings
+            },
+            {
+                path: '/blogs',
+                Component: Blogs
+            }
+        ]
     },
     {
         path: '*',
-        element: <Error />
+        Component: Error
     }
 ]);
 

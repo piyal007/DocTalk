@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 const MyBookings = () => {
@@ -67,8 +65,7 @@ const MyBookings = () => {
     };
 
     return (
-        <>
-            <Navbar />
+        <div>
             <div className="min-h-[calc(100vh-400px)] w-11/12 mx-auto py-12">
 
                 {appointments.length > 0 && (
@@ -135,8 +132,7 @@ const MyBookings = () => {
                     </div>
                 )}
             </div>
-            <Footer />
-        </>
+        </div>
     );
 };
 

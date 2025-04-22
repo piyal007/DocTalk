@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
 import { RiRegisteredLine } from "react-icons/ri";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,8 +27,7 @@ const DoctorDetails = () => {
     if (!doctor) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
 
     return (
-        <>
-            <Navbar />
+        <div>
             <div className="w-11/12 mx-auto py-16 space-y-4">
                 {/* Profile Details Card */}
                 <div className="bg-white rounded-3xl shadow-xl p-8">
@@ -129,9 +126,8 @@ const DoctorDetails = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
             <ToastContainer position="top-right" autoClose={2000} />
-        </>
+        </div>
     );
 };
 
