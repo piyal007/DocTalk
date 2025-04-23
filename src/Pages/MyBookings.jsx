@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { ToastContainer, toast } from 'react-toastify';
 
 const MyBookings = () => {
     const [appointments, setAppointments] = useState([]);
@@ -58,10 +59,12 @@ const MyBookings = () => {
     }, []);
 
     const handleCancelAppointment = (appointmentId) => {
+        const canceledAppointment = appointments.find(app => app.id === appointmentId);
         const updatedAppointments = appointments.filter(app => app.id !== appointmentId);
         setAppointments(updatedAppointments);
         setChartData(processChartData(updatedAppointments));
         localStorage.setItem('appointments', JSON.stringify(updatedAppointments));
+        toast.success(`Appointment with ${canceledAppointment.doctorName} cancelled`);
     };
 
     return (
@@ -132,6 +135,16 @@ const MyBookings = () => {
                     </div>
                 )}
             </div>
+            <ToastContainer 
+                position="top-right" 
+                autoClose={2000} 
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="light"
+                toastClassName="!bg-yellow-100 !text-yellow-900"
+            />
         </div>
     );
 };
