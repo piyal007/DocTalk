@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router';
 import { RiRegisteredLine } from "react-icons/ri";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const DoctorDetails = () => {
     const { id } = useParams();
@@ -10,6 +11,8 @@ const DoctorDetails = () => {
     const [doctor, setDoctor] = useState(null);
     const [hasBooked, setHasBooked] = useState(false);
     const [loading, setLoading] = useState(true);
+
+    useDocumentTitle(doctor ? `${doctor.name}` : 'Doctor Details');
 
     useEffect(() => {
         setLoading(true);

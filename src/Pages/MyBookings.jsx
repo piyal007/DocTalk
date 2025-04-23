@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { ToastContainer, toast } from 'react-toastify';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const MyBookings = () => {
+    useDocumentTitle('My Appointments');
     const [appointments, setAppointments] = useState([]);
     const [chartData, setChartData] = useState([]);
     const navigate = useNavigate();
