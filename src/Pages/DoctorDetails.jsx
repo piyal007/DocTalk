@@ -53,6 +53,43 @@ const DoctorDetails = () => {
         );
     }
 
+    // Check if doctor is available today
+    const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+    const isAvailableToday = doctor.workingDays.includes(today);
+
+    const handleBooking = () => {
+        if (!isAvailableToday) {
+            toast.error('Doctor is unavailable today');
+            return;
+        }
+
+        if (hasBooked) {
+            toast.error('You have already booked an appointment with this doctor!');
+            return;
+        }
+
+        // Create new booking with all required fields
+        const newBooking = {
+            id: Date.now(), // Unique ID for the appointment
+            doctorId: doctor.id,
+            doctorName: doctor.name,
+            education: doctor.qualification,
+            speciality: doctor.specialization,
+            fee: doctor.consultationFee,
+            bookingDate: new Date().toISOString()
+        };
+
+        // Save to localStorage
+        const bookings = JSON.parse(localStorage.getItem('appointments')) || [];
+        localStorage.setItem('appointments', JSON.stringify([...bookings, newBooking]));
+
+        // Show success message
+        toast.success(`Appointment booked successfully with ${doctor.name}`);
+
+        // Navigate to bookings page
+        setTimeout(() => navigate('/my-bookings'), 2000);
+    };
+
     return (
         <div>
             <div className="w-11/12 mx-auto py-16 space-y-4">
@@ -109,46 +146,29 @@ const DoctorDetails = () => {
                     <div className="space-y-6">
                         <div className="flex items-center justify-between border-t-2 py-4 border-b-2 border-dashed border-gray-300">
                             <span>Availability</span>
-                            <span className="bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm">Doctor Available Today</span>
+                            <span className={`${isAvailableToday ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'} px-4 py-1 rounded-full text-sm`}>
+                                {isAvailableToday ? 'Doctor Available Today' : 'Doctor Unavailable Today'}
+                            </span>
                         </div>
 
                         <div className="bg-orange-50 border border-orange-100 rounded-xl p-4">
                             <p className="text-orange-800 text-sm">
-                                Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
+                                {isAvailableToday 
+                                    ? 'Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.'
+                                    : 'The doctor is not available for appointments today. Please check the working days schedule and book on an available day.'}
                             </p>
                         </div>
 
                         <button
-                            onClick={() => {
-                                if (hasBooked) {
-                                    toast.error('You have already booked an appointment with this doctor!');
-                                    return;
-                                }
-
-                                // Create new booking with all required fields
-                                const newBooking = {
-                                    id: Date.now(), // Unique ID for the appointment
-                                    doctorId: doctor.id,
-                                    doctorName: doctor.name,
-                                    education: doctor.qualification,
-                                    speciality: doctor.specialization,
-                                    fee: doctor.consultationFee,
-                                    bookingDate: new Date().toISOString()
-                                };
-
-                                // Save to localStorage
-                                const bookings = JSON.parse(localStorage.getItem('appointments')) || [];
-                                localStorage.setItem('appointments', JSON.stringify([...bookings, newBooking]));
-
-                                // Show success message
-                                toast.success(`Appointment booked successfully with ${doctor.name}`);
-
-                                // Navigate to bookings page
-                                setTimeout(() => navigate('/my-bookings'), 2000);
-                            }}
-                            className={`btn w-full py-4 rounded-full text-lg font-medium transition-colors ${hasBooked ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+                            onClick={handleBooking}
+                            disabled={!isAvailableToday}
+                            className={`btn w-full py-4 rounded-full text-lg font-medium transition-colors ${
+                                isAvailableToday 
+                                    ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                                    : 'bg-gray-300 cursor-not-allowed text-gray-500'
+                            }`}
                         >
-                            {hasBooked ? 'Already Booked' : 'Book Appointment Now'}
+                            {isAvailableToday ? 'Book Appointment Now' : 'Doctor Unavailable'}
                         </button>
                     </div>
                 </div>

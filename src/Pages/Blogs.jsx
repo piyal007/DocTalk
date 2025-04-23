@@ -16,7 +16,7 @@ const Blogs = () => {
     useDocumentTitle('Blogs');
     return (
         <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">React Concepts Explained</h2>
+            <h2 className="text-xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">React Concepts Explained</h2>
             <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
                 <BlogCard
                     title="What is useState and how does it work in React?"

@@ -3,8 +3,12 @@ import { RiRegisteredLine } from "react-icons/ri";
 import { useNavigate } from 'react-router';
 
 const DoctorCard = ({ doctor }) => {
-    const { id, name, specialization, qualification, experience, registration, availability, image } = doctor;
+    const { id, name, specialization, qualification, experience, registration, workingDays, image } = doctor;
     const navigate = useNavigate();
+
+    // Check if doctor is available today
+    const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+    const isAvailableToday = workingDays.includes(today);
 
     return (
         <div className="bg-white rounded-3xl shadow-lg p-8 relative overflow-hidden">
@@ -15,8 +19,8 @@ const DoctorCard = ({ doctor }) => {
 
             {/* Badges */}
             <div className="flex gap-4 mb-4">
-                <div className="bg-green-50 text-green-600 px-4 py-2 rounded-full text-sm font-medium">
-                    {availability}
+                <div className={`${isAvailableToday ? 'bg-green-50 text-green-600' : 'bg-red-50 text-red-600'} px-4 py-2 rounded-full text-sm font-medium`}>
+                    {isAvailableToday ? 'Available' : 'Unavailable'}
                 </div>
                 <div className="bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium">
                     {experience}

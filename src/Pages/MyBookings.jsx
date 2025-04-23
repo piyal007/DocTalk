@@ -101,7 +101,7 @@ const MyBookings = () => {
                     </div>
                 )}
                 <div>
-                    <h2 className="text-3xl font-bold text-center mb-8">My Today Appointments</h2>
+                    <h2 className="text-3xl font-bold text-center mb-2">My Today Appointments</h2>
                     <p className="text-gray-600 text-center mb-12">Our platform connects you with well-verified, experienced doctors across various specialties — all at your convenience.</p>
                 </div>
                 {appointments.length > 0 ? (
