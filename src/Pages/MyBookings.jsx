@@ -64,7 +64,7 @@ const MyBookings = () => {
         setAppointments(updatedAppointments);
         setChartData(processChartData(updatedAppointments));
         localStorage.setItem('appointments', JSON.stringify(updatedAppointments));
-        toast.success(`Appointment with ${canceledAppointment.doctorName} cancelled`);
+        toast.warning(`Appointment with ${canceledAppointment.doctorName} cancelled`);
     };
 
     return (
@@ -135,9 +135,9 @@ const MyBookings = () => {
                     </div>
                 )}
             </div>
-            <ToastContainer 
-                position="top-right" 
-                autoClose={2000} 
+            <ToastContainer
+                position="top-right"
+                autoClose={2000}
                 hideProgressBar={false}
                 closeOnClick
                 pauseOnHover

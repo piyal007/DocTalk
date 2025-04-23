@@ -24,7 +24,20 @@ const DoctorDetails = () => {
             });
     }, [id]);
 
-    if (!doctor) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    if (!doctor) {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+                <h2 className="text-2xl font-bold text-gray-800">No Doctor Found</h2>
+                <p className="text-gray-600">The doctor you are looking for does not exist.</p>
+                <button
+                    onClick={() => navigate('/')}
+                    className="btn bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-colors"
+                >
+                    Back to Home
+                </button>
+            </div>
+        );
+    }
 
     return (
         <div>
@@ -91,13 +104,13 @@ const DoctorDetails = () => {
                             </p>
                         </div>
 
-                        <button 
+                        <button
                             onClick={() => {
                                 if (hasBooked) {
                                     toast.error('You have already booked an appointment with this doctor!');
                                     return;
                                 }
-                                
+
                                 // Create new booking with all required fields
                                 const newBooking = {
                                     id: Date.now(), // Unique ID for the appointment
@@ -108,14 +121,14 @@ const DoctorDetails = () => {
                                     fee: doctor.consultationFee,
                                     bookingDate: new Date().toISOString()
                                 };
-                                
+
                                 // Save to localStorage
                                 const bookings = JSON.parse(localStorage.getItem('appointments')) || [];
                                 localStorage.setItem('appointments', JSON.stringify([...bookings, newBooking]));
-                                
+
                                 // Show success message
                                 toast.success(`Appointment booked successfully with ${doctor.name}`);
-                                
+
                                 // Navigate to bookings page
                                 setTimeout(() => navigate('/my-bookings'), 2000);
                             }}

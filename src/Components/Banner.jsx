@@ -14,7 +14,7 @@ const Banner = () => {
                 </div>
                 <div className="flex justify-center gap-6">
                     <img src="https://i.postimg.cc/xTdKtT2j/banner-img-1.png" alt="Doctor" className="w-[400px] rounded-2xl shadow-lg object-cover" />
-                    <img src="https://i.postimg.cc/xTdKtT2j/banner-img-1.png" alt="Doctor" className="w-[400px] rounded-2xl shadow-lg object-cover" />
+                    <img src="https://i.postimg.cc/vHrsShYz/istockphoto-1342134434-1024x1024.jpg" alt="Doctor" className="w-[400px] rounded-2xl shadow-lg object-cover" />
                 </div>
             </div>
         </div>
