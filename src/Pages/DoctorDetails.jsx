@@ -9,8 +9,10 @@ const DoctorDetails = () => {
     const navigate = useNavigate();
     const [doctor, setDoctor] = useState(null);
     const [hasBooked, setHasBooked] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         // Check if user has already booked
         const bookings = JSON.parse(localStorage.getItem('appointments')) || [];
         const existingBooking = bookings.find(booking => booking.doctorId === parseInt(id));
@@ -21,8 +23,18 @@ const DoctorDetails = () => {
             .then(data => {
                 const selectedDoctor = data.find(doc => doc.id === parseInt(id));
                 setDoctor(selectedDoctor);
+                setLoading(false);
             });
     }, [id]);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+                <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                <p className="text-gray-600">Loading doctor details...</p>
+            </div>
+        );
+    }
 
     if (!doctor) {
         return (

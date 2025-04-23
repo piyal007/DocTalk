@@ -2,9 +2,9 @@ import React from 'react';
 
 const BlogCard = ({ title, content }) => {
     return (
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h3 className="text-2xl font-bold mb-4 text-blue-600">{title}</h3>
-            <div className="prose max-w-none">
+        <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-blue-600">{title}</h3>
+            <div className="prose max-w-none text-sm sm:text-base">
                 {content}
             </div>
         </div>
@@ -13,9 +13,9 @@ const BlogCard = ({ title, content }) => {
 
 const Blogs = () => {
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h2 className="text-4xl font-bold text-center mb-12">React Concepts Explained</h2>
-            <div className="max-w-4xl mx-auto space-y-8">
+        <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">React Concepts Explained</h2>
+            <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
                 <BlogCard
                     title="What is useState and how does it work in React?"
                     content={
@@ -24,8 +24,8 @@ const Blogs = () => {
                                 useState is a React Hook that allows functional components to manage state. It returns an array with two elements:
                                 the current state value and a function to update it.
                             </p>
-                            <div className="bg-gray-100 p-4 rounded-md mb-4">
-                                <pre className="text-sm">
+                            <div className="bg-gray-100 p-3 sm:p-4 rounded-md mb-4 overflow-x-auto">
+                                <pre className="text-xs sm:text-sm">
                                     <code>
                                         {`const [count, setCount] = useState(0);
 
@@ -55,8 +55,8 @@ const Blogs = () => {
                                 useEffect is a Hook that manages side effects in functional components. It's commonly used for data fetching,
                                 subscriptions, or manually changing the DOM.
                             </p>
-                            <div className="bg-gray-100 p-4 rounded-md mb-4">
-                                <pre className="text-sm">
+                            <div className="bg-gray-100 p-3 sm:p-4 rounded-md mb-4 overflow-x-auto">
+                                <pre className="text-xs sm:text-sm">
                                     <code>
                                         {`useEffect(() => {
     // Effect code here
@@ -88,8 +88,8 @@ const Blogs = () => {
                                 Custom hooks are JavaScript functions that start with 'use' and can call other hooks. They allow you to
                                 extract component logic into reusable functions.
                             </p>
-                            <div className="bg-gray-100 p-4 rounded-md mb-4">
-                                <pre className="text-sm">
+                            <div className="bg-gray-100 p-3 sm:p-4 rounded-md mb-4 overflow-x-auto">
+                                <pre className="text-xs sm:text-sm">
                                     <code>
                                         {`const useWindowSize = () => {
     const [size, setSize] = useState({
@@ -134,41 +134,45 @@ const Blogs = () => {
                             </p>
                             <div className="bg-gray-100 p-4 rounded-md mb-4">
                                 <p className="font-semibold mb-2">Controlled Component:</p>
-                                <pre className="text-sm mb-4">
-                                    <code>
-                                        {`const [value, setValue] = useState('');
+                                <div>
+                                    <pre className="text-sm mb-4 overflow-x-auto">
+                                        <code>
+                                            {`const [value, setValue] = useState('');
 
 <input
     value={value}
     onChange={(e) => setValue(e.target.value)}
 />`}
-                                    </code>
-                                </pre>
+                                        </code>
+                                    </pre>
+                                </div>
                                 <p className="font-semibold mb-2">Uncontrolled Component:</p>
-                                <pre className="text-sm">
-                                    <code>
-                                        {`const inputRef = useRef();
+                                <div>
+                                    <pre className="text-sm overflow-x-auto">
+                                        <code>
+                                            {`const inputRef = useRef();
 
 <input
     ref={inputRef}
     defaultValue="default"
 />`}
-                                    </code>
-                                </pre>
+                                        </code>
+                                    </pre>
+                                </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-4 mb-4">
-                                <div>
-                                    <p className="font-semibold mb-2">Controlled:</p>
-                                    <ul className="list-disc pl-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div className="bg-gray-50 p-4 rounded-lg">
+                                    <p className="font-semibold mb-3 text-blue-600">Controlled:</p>
+                                    <ul className="list-disc pl-6 space-y-2">
                                         <li>React manages the state</li>
                                         <li>More predictable</li>
                                         <li>Immediate access to value</li>
                                         <li>Better for form validation</li>
                                     </ul>
                                 </div>
-                                <div>
-                                    <p className="font-semibold mb-2">Uncontrolled:</p>
-                                    <ul className="list-disc pl-6">
+                                <div className="bg-gray-50 p-4 rounded-lg">
+                                    <p className="font-semibold mb-3 text-blue-600">Uncontrolled:</p>
+                                    <ul className="list-disc pl-6 space-y-2">
                                         <li>DOM handles the state</li>
                                         <li>Less code</li>
                                         <li>Better performance</li>
@@ -193,8 +197,8 @@ const Blogs = () => {
                                 useFormStatus is a new React hook introduced in React 18 that provides form submission state information
                                 within form actions. It's particularly useful in Server Components and helps manage loading states during form submissions.
                             </p>
-                            <div className="bg-gray-100 p-4 rounded-md mb-4">
-                                <pre className="text-sm">
+                            <div className="bg-gray-100 p-3 sm:p-4 rounded-md mb-4 overflow-x-auto">
+                                <pre className="text-xs sm:text-sm">
                                     <code>
                                         {`import { useFormStatus } from 'react-dom';
 
