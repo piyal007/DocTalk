@@ -42,7 +42,7 @@ const DoctorDetails = () => {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center gap-4">
                 <h2 className="text-2xl font-bold text-gray-800">No Doctor Found</h2>
-                <p className="text-gray-600">The doctor you are looking for does not exist.</p>
+                <p className="text-gray-600">The doctor you are looking for with this id: <span className='text-red-400'>{id}</span> does not exist.</p>
                 <button
                     onClick={() => navigate('/')}
                     className="btn bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-colors"
