@@ -1,11 +1,13 @@
 import { createBrowserRouter } from 'react-router';
-import Home from '../Pages/Home';
-import MyBookings from '../Pages/MyBookings';
-import Blogs from '../Pages/Blogs';
-import Contact from '../Pages/Contact';
-import DoctorDetails from '../Pages/DoctorDetails';
-import Error from '../Pages/Error';
+import { lazy } from 'react';
 import MainLayout from '../Components/Layout/MainLayout';
+import Error from '../Pages/Error';
+
+// Lazy load components
+const Home = lazy(() => import('../Pages/Home'));
+const MyBookings = lazy(() => import('../Pages/MyBookings'));
+const Blogs = lazy(() => import('../Pages/Blogs'));
+const DoctorDetails = lazy(() => import('../Pages/DoctorDetails'));
 
 const router = createBrowserRouter([
     {
