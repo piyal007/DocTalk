@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const BlogCard = ({ title, content }) => {
     return (
@@ -12,6 +13,7 @@ const BlogCard = ({ title, content }) => {
 };
 
 const Blogs = () => {
+    useDocumentTitle('Blogs');
     return (
         <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">React Concepts Explained</h2>

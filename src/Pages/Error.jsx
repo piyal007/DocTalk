@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import Navbar from '../Components/Navbar';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Error = () => {
+    useDocumentTitle('Page Not Found');
     const navigate = useNavigate();
 
     return (
