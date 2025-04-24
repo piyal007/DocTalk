@@ -124,7 +124,16 @@ const MyBookings = () => {
                                 </button>
                             </div>
                         ))}
+                        <div className='mt-4 flex flex-col justify-center'>
+                            <button
+                                onClick={() => navigate('/')}
+                                className='btn bg-blue-400 text-white hover:bg-blue-500 rounded-2xl'
+                            >
+                                Book Another Doctor
+                            </button>
+                        </div>
                     </div>
+
                 ) : (
                     <div className="text-center">
                         <h3 className="text-xl font-semibold mb-4">No Appointments Found</h3>

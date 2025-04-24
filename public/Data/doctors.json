@@ -6,13 +6,16 @@
         "qualification": "MBBS, MD - Cardiology, DNB",
         "experience": "8+ Years Experience",
         "registration": "Reg No: BD 12451001",
-        "availability": "Available",
+        "availability": "Unavailable",
         "image": "https://i.postimg.cc/jjQNC6Zd/YOhcf41xol-NNa-YTkhhho-OKWNe3-Wko-VXugkme2-JZP.jpg",
         "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
         "workingDays": [
-            "Sunday",
             "Monday",
-            "Tuesday"
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
         ],
         "consultationFee": 575
     },
@@ -29,7 +32,8 @@
         "workingDays": [
             "Monday",
             "Tuesday",
-            "Wednesday"
+            "Wednesday",
+            "Friday"
         ],
         "consultationFee": 600
     },
@@ -46,7 +50,9 @@
         "workingDays": [
             "Tuesday",
             "Wednesday",
-            "Thursday"
+            "Thursday",
+            "Friday",
+            "Saturday"
         ],
         "consultationFee": 550
     },
@@ -57,7 +63,7 @@
         "qualification": "MBBS, MD - Orthopedics, DNB",
         "experience": "12+ Years Experience",
         "registration": "Reg No: BD 12451004",
-        "availability": "Available",
+        "availability": "Unavailable",
         "image": "https://i.postimg.cc/K8745GL0/b-CB6xa9y-VOM422w-Ewvu4-Yat-Vcayv-Owa-Gb1gxl1-IT.png",
         "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
         "workingDays": [
@@ -80,7 +86,9 @@
         "workingDays": [
             "Thursday",
             "Sunday",
-            "Monday"
+            "Monday",
+            "Tuesday",
+            "Wednesday"
         ],
         "consultationFee": 575
     },
@@ -91,13 +99,14 @@
         "qualification": "MBBS, MD - General Surgery, DNB",
         "experience": "9+ Years Experience",
         "registration": "Reg No: BD 12451006",
-        "availability": "Available",
+        "availability": "Unavailable",
         "image": "https://i.postimg.cc/tCXcgDk7/P9-Ge-Lwc3g6c8txu-C7g-EW6-Urnc-Mps-Cq8-WTB2zx-Xn-L.png",
         "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
         "workingDays": [
-            "Sunday",
             "Monday",
-            "Wednesday"
+            "Wednesday",
+            "Thursday",
+            "Friday"
         ],
         "consultationFee": 650
     },
@@ -114,7 +123,9 @@
         "workingDays": [
             "Monday",
             "Tuesday",
-            "Thursday"
+            "Thursday",
+            "Friday",
+            "Saturday"
         ],
         "consultationFee": 600
     },
@@ -125,13 +136,14 @@
         "qualification": "MBBS, MD - Psychiatry, DNB",
         "experience": "9+ Years Experience",
         "registration": "Reg No: BD 12451008",
-        "availability": "Available",
+        "availability": "Unavailable",
         "image": "https://i.postimg.cc/SNsG5PVL/v4-MKu-QWdyn-Z9um-IVgvej-F2-L6voevt-FErs-Dp-Fjo-PZ.jpg",
         "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
         "workingDays": [
             "Tuesday",
             "Wednesday",
-            "Sunday"
+            "Monday",
+            "Thursday"
         ],
         "consultationFee": 625
     },
@@ -142,7 +154,7 @@
         "qualification": "MBBS, MD - Endocrinology, DNB",
         "experience": "8+ Years Experience",
         "registration": "Reg No: BD 12451009",
-        "availability": "Available",
+        "availability": "Unavailable",
         "image": "https://i.postimg.cc/cJsC9pB0/7uto6-Zmh-YKi-M05w-S6-Uwk-Todv-Kxk0ek-Vs-Vp-JU9-S67.jpg",
         "hospital": "TMSS Medical College & Rafatullah Community Hospital, Dhaka",
         "workingDays": [
@@ -159,13 +171,14 @@
         "qualification": "MBBS, MD - Pulmonology, FCCP",
         "experience": "15+ Years Experience",
         "registration": "Reg No: BD 12451010",
-        "availability": "Available",
+        "availability": "Unavailable",
         "image": "https://i.postimg.cc/DyVLnvqg/e4-GP78-X5-FKwc4-BCz1-LN6-Oe-H5wk-BC2-G4v-A90-GViyo.png",
         "hospital": "Square Hospitals Ltd, Dhaka",
         "workingDays": [
             "Saturday",
-            "Sunday",
-            "Tuesday"
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
         ],
         "consultationFee": 700
     },
@@ -176,7 +189,7 @@
         "qualification": "MBBS, MD - Rheumatology, FRCP",
         "experience": "13+ Years Experience",
         "registration": "Reg No: BD 12451011",
-        "availability": "Available",
+        "availability": "Unavailable",
         "image": "https://i.postimg.cc/HWByt5vN/female-doctor-hospital.jpg",
         "hospital": "United Hospital Limited, Dhaka",
         "workingDays": [
@@ -199,7 +212,9 @@
         "workingDays": [
             "Tuesday",
             "Friday",
-            "Sunday"
+            "Sunday",
+            "Monday",
+            "Wednesday"
         ],
         "consultationFee": 675
     }

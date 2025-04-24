@@ -161,14 +161,14 @@ const DoctorDetails = () => {
 
                         <button
                             onClick={handleBooking}
-                            disabled={!isAvailableToday}
+                            disabled={!isAvailableToday || hasBooked}
                             className={`btn w-full py-4 rounded-full text-lg font-medium transition-colors ${
-                                isAvailableToday 
-                                    ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                                    : 'bg-gray-300 cursor-not-allowed text-gray-500'
+                                !isAvailableToday || hasBooked
+                                    ? 'bg-gray-300 cursor-not-allowed text-gray-500'
+                                    : 'bg-blue-600 hover:bg-blue-700 text-white'
                             }`}
                         >
-                            {isAvailableToday ? 'Book Appointment Now' : 'Doctor Unavailable'}
+                            {!isAvailableToday ? 'Doctor Unavailable' : hasBooked ? 'Already Booked' : 'Book Appointment Now'}
                         </button>
                     </div>
                 </div>
